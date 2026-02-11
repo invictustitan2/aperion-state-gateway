@@ -1,6 +1,6 @@
 [project]
 name = "aperion-cortex"
-version = "0.1.0"
+version = "1.2.1"
 description = "The Cortex - Unified memory and state management service for Aperion"
 readme = "README.md"
 license = {text = "MIT"}
@@ -55,9 +55,10 @@ huggingface = [
 aperion-cortex = "aperion_cortex.main:main"
 
 [project.urls]
-Homepage = "https://github.com/aperion-ai/aperion-state-gateway"
-Documentation = "https://github.com/aperion-ai/aperion-state-gateway#readme"
-Repository = "https://github.com/aperion-ai/aperion-state-gateway"
+Homepage = "https://github.com/invictustitan2/aperion-state-gateway"
+Documentation = "https://github.com/invictustitan2/aperion-state-gateway#readme"
+Repository = "https://github.com/invictustitan2/aperion-state-gateway"
+"Bug Tracker" = "https://github.com/invictustitan2/aperion-state-gateway/issues"
 
 [build-system]
 requires = ["hatchling"]

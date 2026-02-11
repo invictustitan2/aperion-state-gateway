@@ -50,7 +50,10 @@ Long-term persistence via Vector DB (ChromaDB/FAISS) and SQLite.
 ## Quick Start
 
 ```bash
-# Install dependencies
+# Install from PyPI
+pip install aperion-cortex
+
+# Or install from source with dev dependencies
 pip install -e ".[dev]"
 
 # Run the service
