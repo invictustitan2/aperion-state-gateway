@@ -1,0 +1,27 @@
+# Docker Compose for Aperion Cortex development
+
+services:
+  cortex:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4949:4949"
+    environment:
+      - CORTEX_SIGNING_KEY=${CORTEX_SIGNING_KEY:-dev-signing-key-change-in-production}
+      - CORTEX_DB_PATH=/app/data/cortex.db
+      - CORTEX_VECTOR_BACKEND=chroma
+      - CORTEX_LOG_LEVEL=INFO
+    volumes:
+      - cortex_data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4949/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+
+volumes:
+  cortex_data:
+    driver: local
